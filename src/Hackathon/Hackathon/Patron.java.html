@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>Patron.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Patron.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">Hackathon</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">ArrayList</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">List</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">Patron </span><span class="s2">{</span>
+
+    <span class="s0">private </span><span class="s1">String name</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">String id</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">List</span><span class="s2">&lt;</span><span class="s1">Book</span><span class="s2">&gt; </span><span class="s1">borrowedBooks</span><span class="s2">; </span><span class="s3">//List&lt;Book&gt; cannot be creating an object/instance.</span>
+    <span class="s3">//so you beed to instantiate by using ArrayList&lt;Book&gt;</span>
+
+    <span class="s3">//(1)</span>
+    <span class="s3">//write a constructor header. This constructor only takes two parameters</span>
+    <span class="s3">// they are name and id</span>
+    <span class="s0">public </span><span class="s1">Patron</span><span class="s2">(</span><span class="s1">String newName</span><span class="s2">, </span><span class="s1">String newId</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">name </span><span class="s2">= </span><span class="s1">newName</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">id </span><span class="s2">= </span><span class="s1">newId</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">borrowedBooks </span><span class="s2">= </span><span class="s0">new </span><span class="s1">ArrayList</span><span class="s2">&lt;</span><span class="s1">Book</span><span class="s2">&gt;();</span>
+        <span class="s3">//instantiation by using ArrayList&lt;Book&gt;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">borrowBook</span><span class="s2">(</span><span class="s1">Book book</span><span class="s2">) {</span>
+        <span class="s0">if </span><span class="s2">(</span><span class="s1">book</span><span class="s2">.</span><span class="s1">isAvailable</span><span class="s2">()) {</span>
+            <span class="s1">borrowedBooks</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">book</span><span class="s2">); </span><span class="s3">//add that book to borrowedBooks list.</span>
+            <span class="s3">//call this method from Book class.</span>
+            <span class="s3">// public void setAvailable(boolean available) {</span>
+            <span class="s3">//        isAvailable = available;</span>
+            <span class="s3">//    }</span>
+            <span class="s3">//and make a decision which actual parameter/argument you will take when this method is invoked</span>
+            <span class="s1">book</span><span class="s2">.</span><span class="s1">setAvailable</span><span class="s2">(</span><span class="s0">false</span><span class="s2">);</span>
+        <span class="s2">}</span>
+
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">returnBook</span><span class="s2">(</span><span class="s1">Book book</span><span class="s2">) {</span>
+        <span class="s1">borrowedBooks</span><span class="s2">.</span><span class="s1">remove</span><span class="s2">(</span><span class="s1">book</span><span class="s2">);</span>
+        <span class="s1">book</span><span class="s2">.</span><span class="s1">setAvailable</span><span class="s2">(</span><span class="s0">true</span><span class="s2">);</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">String getName</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">name</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">setName</span><span class="s2">(</span><span class="s1">String name</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">name </span><span class="s2">= </span><span class="s1">name</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">String getId</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">id</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">setId</span><span class="s2">(</span><span class="s1">String id</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">id </span><span class="s2">= </span><span class="s1">id</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">List</span><span class="s2">&lt;</span><span class="s1">Book</span><span class="s2">&gt; </span><span class="s1">getBorrowedBooks</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">borrowedBooks</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">setBorrowedBooks</span><span class="s2">(</span><span class="s1">List</span><span class="s2">&lt;</span><span class="s1">Book</span><span class="s2">&gt; </span><span class="s1">borrowedBooks</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">borrowedBooks </span><span class="s2">= </span><span class="s1">borrowedBooks</span><span class="s2">;</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>

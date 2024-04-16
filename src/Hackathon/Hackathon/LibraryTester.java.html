@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>LibraryTester.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #5f826b; font-style: italic;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+LibraryTester.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">Hackathon</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">LibraryTester </span><span class="s2">{</span>
+    <span class="s0">public static void </span><span class="s1">main</span><span class="s2">(</span><span class="s1">String</span><span class="s2">[] </span><span class="s1">args</span><span class="s2">) {</span>
+
+        <span class="s1">Book b1 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Book</span><span class="s2">(</span><span class="s3">&quot;The Hitchhiker's guide to the Galaxy&quot;</span><span class="s2">, </span><span class="s3">&quot;Douglas Adams&quot;</span><span class="s2">, </span><span class="s3">&quot;0-330-2584-8&quot;</span><span class="s2">, </span><span class="s0">true</span><span class="s2">);</span>
+        <span class="s1">Book b2 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Book</span><span class="s2">(</span><span class="s3">&quot;The Giving Tree&quot;</span><span class="s2">, </span><span class="s3">&quot;Neal Shusterman&quot;</span><span class="s2">, </span><span class="s3">&quot;0-312-2345-67&quot;</span><span class="s2">, </span><span class="s0">false</span><span class="s2">);</span>
+
+        <span class="s1">Patron roya </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Patron</span><span class="s2">(</span><span class="s3">&quot;Roya Saba&quot;</span><span class="s2">, </span><span class="s3">&quot;001&quot;</span><span class="s2">);</span>
+        <span class="s1">Librarian ayanna </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Librarian</span><span class="s2">(</span><span class="s3">&quot;Ayanna Lore&quot;</span><span class="s2">, </span><span class="s3">&quot;Libra-SF-001&quot;</span><span class="s2">);</span>
+        <span class="s1">ayanna</span><span class="s2">.</span><span class="s1">addBook</span><span class="s2">(</span><span class="s1">b1</span><span class="s2">);</span>
+        <span class="s1">ayanna</span><span class="s2">.</span><span class="s1">addBook</span><span class="s2">(</span><span class="s1">b2</span><span class="s2">);</span>
+
+        <span class="s1">ayanna</span><span class="s2">.</span><span class="s1">checkoutBook</span><span class="s2">(</span><span class="s1">b1</span><span class="s2">, </span><span class="s1">roya</span><span class="s2">);</span>
+        <span class="s1">ayanna</span><span class="s2">.</span><span class="s1">checkoutBook</span><span class="s2">(</span><span class="s1">b2</span><span class="s2">, </span><span class="s1">roya</span><span class="s2">);</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+<span class="s4">/**</span>
+
+ <span class="s4">* Library ourLibrary = new Library();</span>
+
+ <span class="s4">*</span>
+
+ <span class="s4">*         ourLibrary.addBooks(new Book(&quot;The Hitchhiker's guide to the Galaxy&quot;,&quot;Douglas Adams&quot;, 1979));</span>
+
+ <span class="s4">*         ourLibrary.addBooks(new Book(&quot;Dork Diaries&quot;,&quot;Rachel Rusell&quot;,2009));</span>
+
+ <span class="s4">*         ourLibrary.addBooks(new Book(&quot;The Giving Tree&quot;,&quot;Neal Shusterman&quot;,1964));</span>
+
+ <span class="s4">*         ourLibrary.addBooks(new Book(&quot;Schythe&quot;, &quot;Neal Shusterman&quot;,2016));</span>
+
+ <span class="s4">*         ourLibrary.addBooks(new Book(&quot;To kill a mockingbird&quot;, &quot;Harper Lee&quot;,1960));</span>
+
+ <span class="s4">*         ourLibrary.addBooks(new Book(&quot;Diary of a Wimpy&quot;,&quot;Jeff Kenny&quot;,2007));</span>
+
+ <span class="s4">*</span>
+
+ <span class="s4">*         ourLibrary.listBooks();</span>
+
+ <span class="s4">*</span>
+
+ <span class="s4">*         Book oldBook = ourLibrary.findOldestBook();</span>
+
+ <span class="s4">*</span>
+
+ <span class="s4">*         System.out.println(&quot;Oldest book:  \n&quot; + oldBook);</span>
+
+ <span class="s4">*</span>
+
+ <span class="s4">*         Book recent = ourLibrary.findMostRecentBook();</span>
+
+ <span class="s4">*         System.out.println(&quot;Most recent book :\n&quot; +  recent);</span>
+
+ <span class="s4">*/</span></pre>
+</body>
+</html>

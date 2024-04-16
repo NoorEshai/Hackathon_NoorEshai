@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>Book.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #5f826b; font-style: italic;}
+.s4 { color: #6aab73;}
+.s5 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Book.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">Hackathon</span><span class="s2">;</span>
+
+<span class="s3">/**</span>
+ <span class="s3">* create four data/attributes/fields - title, author, isbn, isAvailable</span>
+ <span class="s3">*/</span>
+<span class="s0">public class </span><span class="s1">Book </span><span class="s2">{</span>
+    <span class="s0">private </span><span class="s1">String title</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">String author</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">String isbn</span><span class="s2">;</span>
+    <span class="s0">private boolean </span><span class="s1">isAvailable</span><span class="s2">;</span>
+
+    <span class="s0">public </span><span class="s1">Book</span><span class="s2">(</span><span class="s1">String title</span><span class="s2">, </span><span class="s1">String author</span><span class="s2">, </span><span class="s1">String isbn</span><span class="s2">, </span><span class="s0">boolean </span><span class="s1">isAvailable</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">title </span><span class="s2">= </span><span class="s1">title</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">author </span><span class="s2">= </span><span class="s1">author</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">isbn </span><span class="s2">= </span><span class="s1">isbn</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">isAvailable </span><span class="s2">= </span><span class="s1">isAvailable</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s0">public </span><span class="s1">Book</span><span class="s2">() {</span>
+        <span class="s0">this</span><span class="s2">(</span><span class="s4">&quot;A Game of Thrones&quot;</span><span class="s2">,</span><span class="s4">&quot;George R. R. Martin&quot;</span><span class="s2">,</span><span class="s4">&quot;978 - 0553573404&quot;</span><span class="s2">, </span><span class="s0">true </span><span class="s2">) ;</span>
+    <span class="s2">}</span>
+    <span class="s5">//(2)</span>
+    <span class="s5">// create a no-arg constructor. inside of the constructor. you need to initialize</span>
+    <span class="s5">// following values.</span>
+    <span class="s5">//title = &quot;your favorite book title&quot;</span>
+    <span class="s5">//author = &quot;the author of the book&quot;</span>
+    <span class="s5">// isbn -- you need to find real isbn number for that book</span>
+    <span class="s5">//isAvailable -- default value is false, but in this constructor , you need to make it true</span>
+
+    <span class="s5">// create a constructor taking all four data. (1)</span>
+
+
+    <span class="s0">public boolean </span><span class="s1">isAvailable</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">isAvailable</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">setAvailable</span><span class="s2">(</span><span class="s0">boolean </span><span class="s1">available</span><span class="s2">) {</span>
+        <span class="s1">isAvailable </span><span class="s2">= </span><span class="s1">available</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">String getIsbn</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">isbn</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">setIsbn</span><span class="s2">(</span><span class="s1">String isbn</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">isbn </span><span class="s2">= </span><span class="s1">isbn</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">String getTitle</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">title</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">setTitle</span><span class="s2">(</span><span class="s1">String title</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">title </span><span class="s2">= </span><span class="s1">title</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">String getAuthor</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">author</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">setAuthor</span><span class="s2">(</span><span class="s1">String author</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">author </span><span class="s2">= </span><span class="s1">author</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+<span class="s2">}</span>
+</pre>
+</body>
+</html>
